@@ -1,0 +1,81 @@
+.logo img {
+    height: 100%;
+}
+
+#seccio_ciclista{
+    height: 70px;
+    background-color: pink;
+}
+
+#cta .mal_us{
+    color: white;
+    font-weight: bold;
+}
+
+#bloc_mapa {
+    background-color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+#bloc_mapa p{
+    border-left: 10px solid grey;
+    padding: 25px;
+}
+
+#mapa {
+    background-image: url("../../images/mapabuit.png");
+    width: 100%;
+    height: 815px;
+}
+
+#mapa:hover {
+    background-image: url("../../images/mapaparquings.png");
+    transition: 1.5s;
+}
+
+
+
+/* Bruixola */
+#bruixola{
+    height: 20%;
+    width: 20%;
+}
+
+
+/* LLista parkings */
+#llista_parkings img {
+    height: 200px;
+    width: 100%;
+    overflow: auto;
+}
+
+.park1:hover{
+    transform: scale(1.2);
+    transition: 3s;
+}
+
+.park2:hover{
+    opacity: 0;
+    transition: 3s;
+}
+
+.park3:hover{
+    transform: scale(0.8);
+    transition: 3s;
+}
+
+.park4:hover{
+    transform: rotate(-15deg);
+    transition: 3s;
+}
+
+.park5:hover{
+    background-color: rgba(125, 27, 47, 0.512);
+    transition: 3s;
+}
+
+.park6:hover{
+    transform: rotate(15deg);
+    transition: 3s;
+}

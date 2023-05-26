@@ -1,0 +1,50 @@
+
+create table ciutada
+(
+DNI char(9),
+pass varchar(50),
+nom varchar(150),
+telefon varchar(10),
+primary key (DNI)
+);
+
+create table parquing
+(
+id integer,
+adresa varchar(250),
+maxBicis integer,
+numBicis integer,
+primary key (id)
+);
+
+create table bicicleta
+(
+id integer,
+kilometres integer, 
+DNICiutada char(9),
+idParquing integer,
+primary key (id),
+foreign key (DNICiutada) references ciutada(DNI),
+foreign key (idParquing) references parquing(id)
+);
+
+insert into parquing values (1,"C/Angel Guimera 16", 10, 4);
+insert into parquing values (2,"Av/ Catalunya 5", 10, 5);
+insert into parquing values (3,"C/Verge de Nuria, 38", 6, 0);
+insert into parquing values (4,"C/Collformig 290", 15, 1);
+
+insert into ciutada values ('52111111A','joshua','Marta Costa Boix','658111222');
+insert into ciutada values ('52222222B','rosebud','Pere Jonquera Boix','699876543');
+insert into ciutada values ('52333333C','dadada','Marcos Sucre Montaña','624862486');
+insert into ciutada values ('52444444D','0451','Laura Sentís Aguilar','671943183');
+
+insert into bicicleta values (1,128,null,1);
+insert into bicicleta values (2,256,null,1);
+insert into bicicleta values (3,64,null,1);
+insert into bicicleta values (4,1024,null,1);
+insert into bicicleta values (5,128,null,2);
+insert into bicicleta values (6,256,null,2);
+insert into bicicleta values (7,64,null,2);
+insert into bicicleta values (8,512,null,2);
+insert into bicicleta values (9,1024,null,2);
+insert into bicicleta values (10,64,null,4);
